@@ -4,7 +4,7 @@ ARG REPO_DIR
 
 EXPOSE 8000
 
-ENV CRYPTIXD_HOST_1=localhost:19201
+ENV CRYPTIXD_HOST_1=n.seeder1.cryptixd.net:16110
 ENV SQL_URI=postgresql+asyncpg://postgres:password@postgresql:5432/postgres
 ARG version
 ENV VERSION=$version
@@ -21,8 +21,8 @@ RUN apk --no-cache add \
 RUN pip install \
   pipenv
 
-RUN addgroup -S -g 27182 api \
-  && adduser -h /app -S -D -g '' -G api -u 27182 api
+RUN addgroup -S -g 55746 api \
+  && adduser -h /app -S -D -g '' -G api -u 55746 api
 
 WORKDIR /app
 
